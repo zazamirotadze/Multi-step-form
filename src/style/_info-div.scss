@@ -1,0 +1,92 @@
+.info-div{
+    width: 510px;
+    height: 100%;
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 0.7fr 0.9fr 2.7fr 0.6fr;
+    @include respond(tab-port){ 
+        width: 100%;
+    }
+    @include respond(phone){ 
+        width: 90%;
+        grid-template-rows: 0fr 0.9fr 2.7fr 0fr;
+        height: fit-content;
+    }
+    &>div{
+       
+    }
+    &__heading-div{
+        @include respond(phone){ 
+            height: fit-content;
+        }
+        & h1{
+            font-family: regular-bold;
+            color: $Marine-blue;
+            @include respond(phone){ 
+                font-size: 28px;
+            }
+        }
+        & h3{
+            color: $Cool-gray;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            
+        }
+        
+    }
+    &__buttons-div{
+        position: relative;
+        @include respond(phone){ 
+            position: absolute;   
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 50px;
+        }
+        & button{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 13px 0 13px 0;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        &-go-back-btn{
+            background-color: transparent;
+            color: $Cool-gray;
+            font-family: regular-bold;
+            &:hover, &:active{
+                color: $Marine-blue;
+            }
+        }
+        &-next-step-btn{
+            background-color: $Marine-blue;
+            color: $White;
+            margin-left: auto;
+            right: 0;
+            &:hover, &:active{
+                background-color: lighten($color: $Marine-blue, $amount: 7) ;
+            }
+            @include respond(phone){ 
+                right: 10px;
+            }
+        }
+        &-confirm-btn{
+            background-color: $Purplish-blue;
+            color: $White;
+            margin-left: auto;
+            right: 0;
+            &:hover, &:active{
+                background-color: lighten($color: $Purplish-blue, $amount: 7) ;
+            }
+            @include respond(phone){ 
+                right: 10px;
+            }
+        }
+    }
+}

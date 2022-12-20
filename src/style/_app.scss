@@ -1,0 +1,53 @@
+.App{
+    width: 1000px;
+    height: 600px;
+    @include respond(tab-land){ 
+        width: 90%;
+    }
+    border-radius: 10px;
+    margin: 20px auto 0px auto;
+    display: flex;
+    padding: 15px 0px 15px 15px;
+    background-color: $White;
+    @include respond(phone){ 
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0px 20px 0px;
+        height: fit-content;
+        margin-top: 80px;  
+    }
+    &__section-div{
+        width: 270px;
+        height: 100%;
+        background-image: url(../../public/assets/images/bg-sidebar-desktop.svg);
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        @include respond(tab-port){ 
+            width: 27%;
+            min-width: 200px;
+        }
+
+        @include respond(phone){ 
+            background-image: url(../../public/assets/images/bg-sidebar-mobile.svg);
+            background-size: 400px;
+            min-width: 0px;
+            width: 100%;
+            position: absolute;
+            top: 0;    
+            z-index: -1;
+            background-position: center 0;
+            
+        }
+
+    }
+    &__action-div{
+        width: 73%;
+        height: 100%;
+        
+        @include respond(phone){ 
+            width: 100%;   
+            height: fit-content;
+            
+        }
+    }
+}

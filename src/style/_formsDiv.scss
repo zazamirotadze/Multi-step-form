@@ -1,0 +1,320 @@
+.forms-div{
+    & > div{
+        @include respond(phone){ 
+            margin-top: 20px;  
+        }
+    }
+
+    &__setup1-inputs-div{
+        & > div{
+            position: relative;
+        }
+        & > div:not(:first-child){
+            margin-top: 20px;
+        }
+        & input{
+            width: 100%;
+            padding: 12px 0px 12px 10px;
+            outline: none;
+            border-radius: 5px;
+            color: $Marine-blue;
+            font-size: 15px;
+            margin-top: 5px;
+            border: 1px solid $Cool-gray;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover, &:active{
+                border: 1px solid $Purplish-blue;
+            }
+        }
+        & h3{
+            font-size: 15px;
+            color: $Marine-blue;
+            font-family: lighter;
+           
+        }
+
+    }
+    &__setup2{
+        &-icons-div{          
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap:20px;
+            @include respond(tab-port){ 
+                grid-gap:1px;
+            }
+            @include respond(phone){ 
+                display: flex;
+                flex-direction: column;
+                gap: 10px;   
+                margin-top: -10px;
+            }
+            &>div{
+                padding: 20px 0px 17px 15px;
+                border: 1px solid $Cool-gray;
+                border-radius: 7px;
+                cursor: pointer;
+                @include respond(phone){ 
+                    display: flex;
+                    padding: 0;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    align-items: center;
+                    gap: 10px;
+                }
+                &:hover, &:active{
+                    border: 1px solid $Purplish-blue;
+                }
+                & img{
+                    margin-bottom: 40px;
+                    @include respond(phone){ 
+                        margin-bottom: 0px;
+                    }
+                }
+                & h3{
+                    color: $Marine-blue;
+                }
+                & h4{
+                    color: $Cool-gray; 
+                    margin-top: 5px;
+                    @include respond(phone){ 
+                        margin-top: 0;
+                    }
+                }
+                & h5{
+                    color:$Marine-blue ;
+                    letter-spacing: 1px;
+                    margin-top: 8px;
+                    @include respond(phone){ 
+                        margin-top: 0;
+                        
+                    }
+                }
+            }
+        }
+        &-monthly-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            height: 50px;
+            background-color: $Magnolia;
+            margin-top: 30px;
+            cursor: pointer;
+            @include respond(phone){ 
+                margin-top: 0;
+                gap: 0;
+                justify-content: space-around;
+            }
+
+        }  
+    }
+    &__setup3{
+ 
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include respond(phone){ 
+            gap: 0px;
+        }
+        &-checkmark-div-picked{
+            background-color: $Magnolia;
+            border: 1px solid $Purplish-blue;
+            &>h4{
+                margin-left: auto;
+                color: $Purplish-blue;
+            }
+        }
+        &-checkmark-div-picked,
+        &-checkmark-div{
+            height: 70px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            padding: 0 20px;
+            @include respond(phone){ 
+                padding: 0 5px;
+            }
+            cursor: pointer;
+            &:hover, &:active{
+                border: 1px solid $Purplish-blue;
+            }
+        }
+        &-checkmark-div{
+            border: 1px solid $Cool-gray;
+            &-img-div,
+            &-img-div-picked{
+                border: 1px solid $Cool-gray;
+                height: 17px;
+                width: 17px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+            }
+            &-img-div-picked{
+                background-color: $Purplish-blue;
+            }
+            &-headings-div{
+                margin-left: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                &>h4{
+                    color: darken($color: $Marine-blue, $amount: 7) ;
+                }
+                &>h5{
+                    color: $Cool-gray;
+                }
+            }
+            &>h4{
+                margin-left: auto;
+                color: $Purplish-blue;
+            }
+        }
+    }
+    &__setup4{
+        &-plan-div{
+            background-color: $Magnolia;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            &-bottom-border{
+                height: 1px;
+                background-color: $Light-gray;
+                position: absolute;
+                bottom: 0;
+                width: 92%;
+            }
+            & > div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+            & h4{
+                color: darken($color: $Marine-blue, $amount: 5) ;
+            }
+            & h5{
+                font-size: 14px;
+                color: $Cool-gray;
+                text-decoration: underline 1.5px;
+                cursor: pointer;
+                width: fit-content;
+            }
+            
+        }
+        &-add-on-div-container{
+            background-color: $Magnolia;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        &-add-on-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            & > h5:nth-child(1){
+                color: $Cool-gray;
+            }
+            & > h5:nth-child(2){
+               color: darken($color: $Marine-blue, $amount: 5) ;;
+            }
+        }
+        &-total-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px;
+            height: 50px;
+            & h5{
+                color: $Cool-gray;
+            }
+            & h3{
+                color: $Purplish-blue;
+            }
+        }
+    }
+    &__setup5{
+        text-align: center;
+        & h1{
+            color: darken($color: $Marine-blue, $amount: 3) ;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        & h4{
+            color: $Cool-gray;
+            
+            font-weight: lighter;
+            line-height: 25px;
+        }
+    }
+}
+
+.required-div{
+    color: $Strawberry-red;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    font-weight: bold;
+}
+
+.errored-input{
+    border: 1px solid $Strawberry-red !important;
+    
+}
+
+.To-vanish-div{display: none;}
+
+// to switch between monthy and yearly
+.Monthly-Yearly-div-monthly,
+.Monthly-Yearly-div-yearly{
+    width: 40px;
+    height: 23px;
+    background-color: $Marine-blue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px 0 5px;
+    
+}
+.Monthly-Yearly-div-monthly{justify-content: flex-start;}
+.Monthly-Yearly-div-yearly{justify-content: flex-end;}
+
+.Monthly-Yearly-div-circle{
+    height: 15px;
+    width: 15px;
+    background-color: $White;
+    border-radius: 50%;
+}
+.isActive{color: $Marine-blue;}
+.isNotActive{color: $Cool-gray;}
+
+.planChosen{border: 1px solid $Purplish-blue !important; background-color: $Magnolia;}
+///
+
+
+.test-div{
+    &-small{
+        width: 5px;
+        height: 9px;
+    }
+
+    &-small:nth-child(1){
+        float: left;
+    }
+    &-small:nth-child(2){
+        float: right;
+    }
+    
+}
+ 

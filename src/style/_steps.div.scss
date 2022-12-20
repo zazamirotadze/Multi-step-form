@@ -1,0 +1,72 @@
+.steps{
+
+    padding: 10px 0px 0px 30px;
+    @include respond(phone){ 
+       display: flex;
+
+       padding: 0;
+       justify-content: center;
+    }
+    & > div{
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        & > div:nth-child(2){
+            &  > h2{
+                @include respond(phone){ 
+                    display: none;
+                }
+            }
+        }
+
+    }
+    & h3{
+        color: $Cool-gray;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        @include respond(phone){ 
+            display: none;
+        }
+    }
+    & h2{
+        color: $White;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+
+
+}
+
+.circle,.colorful-circle{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    position: relative;
+    & > h2{
+        font-size: 13px;
+        left: 50%;
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -60%);
+    }
+}
+
+
+.circle{
+    border: 1px solid $White;
+}
+
+.colorful-circle{
+    border: 1px solid $Light-blue;
+    background-color:  $Light-blue;
+    & > h2{
+        color: $Marine-blue;
+    }
+    
+}
+
